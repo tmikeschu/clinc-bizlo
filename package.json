@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/tmikeschu/clinc-fp-wrapper/issues"
   },
-  "homepage": "https://github.com/tmikeschu/clinc-fp-wrapper#readme"
+  "homepage": "https://github.com/tmikeschu/clinc-fp-wrapper#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ramda": "^0.25.0"
+  }
 }
