@@ -4,7 +4,8 @@
   "description": "business logic layer for clinc app",
   "main": "index.js",
   "scripts": {
-    "test": "tape"
+    "test": "tape",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/tmikeschu/clinc-fp-wrapper#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "ramda": "^0.25.0"
   }
