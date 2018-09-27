@@ -1,0 +1,23 @@
+{
+  "name": "clinc-fp-wrapper",
+  "version": "1.0.0",
+  "description": "business logic layer for clinc app",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmikeschu/clinc-fp-wrapper.git"
+  },
+  "keywords": [
+    "ai",
+    "functional programming"
+  ],
+  "author": "tmikeschu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmikeschu/clinc-fp-wrapper/issues"
+  },
+  "homepage": "https://github.com/tmikeschu/clinc-fp-wrapper#readme"
+}
