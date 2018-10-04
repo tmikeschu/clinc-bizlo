@@ -9,11 +9,11 @@ app.use(bodyParser.json());
 app.post("/clinc-bizlo", (req, res) => {
   R.pipe(
     R.prop("body"),
-    R.tap(console.log),
     R.tap(
       R.pipe(
         R.prop("slots"),
-        JSON.stringify
+        JSON.stringify,
+        console.log
       )
     ),
     R.tap(
