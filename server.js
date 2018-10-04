@@ -12,6 +12,12 @@ app.post("/clinc-bizlo", (req, res) => {
     R.tap(console.log),
     R.tap(
       R.pipe(
+        R.prop("slots"),
+        JSON.stringify
+      )
+    ),
+    R.tap(
+      R.pipe(
         JSON.stringify,
         res.send.bind(res)
       )
