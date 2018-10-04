@@ -1,6 +1,6 @@
 const R = require("ramda");
 
-const slotsPath = ["body", "slots"];
+const slotsPath = ["slots"];
 
 const slotLens = R.pipe(
   R.of,
@@ -9,8 +9,10 @@ const slotLens = R.pipe(
 );
 
 const headLens = R.lensIndex(0);
+const tailLens = R.lensIndex(1);
 
 module.exports = {
   slotLens,
-  headLens
+  headLens,
+  tailLens
 };
