@@ -1,13 +1,17 @@
-# clinc-fp-wrapper
+# Clinc Bizlo
 
-A business logic layer for a basic clinc ai version
+A business logic layer for a basic [Clinc](https://clinc.com) integration.
 
-"Hey! Can you wrap array's reduce?"
+## Finance
 
-"Sure, what are its arguments?"
+"How much do I have in checking?"
 
-"It takes a reducer and an initial value"
+"$200"
 
-"Great, here you go:
-`const reduce = reducer => initialValue => coll =>
-  coll.reduce(reducer, initialValue)`"
+"Can I transfer $50 from there to savings?"
+
+"Transfer $50 from checking to savings, right?"
+
+"Yes."
+
+"Great! Transfer successful."

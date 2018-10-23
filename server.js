@@ -9,11 +9,18 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 app.post("/api/v1/clinc", (req, res) => {
+  console.log(
+    "XXXXXXXXXXXXXXXXX REQUEST DATA XXXXXXXXXXXXXXXXXXXX",
+    JSON.stringify(req.body)
+  );
+
   const resolved = conversationResolver(req.body);
-  console.log(JSON.stringify(req.body));
 
   if (resolved) {
-    console.log("RESPONSE: ", JSON.stringify({ ...req.body, ...resolved }));
+    console.log(
+      "XXXXXXXXXXXXXXXXX RESPONSE DATA XXXXXXXXXXXXXXXXXXXX",
+      JSON.stringify({ ...req.body, ...resolved })
+    );
     res.send(JSON.stringify({ ...req.body, ...resolved }));
   } else {
     // Clinc ignores any 400-500 responses
