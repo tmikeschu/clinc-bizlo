@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const R = require("ramda");
 const conversationResolver = require("./lib/finance");
+// const conversationResolver = require("./lib/send_money");
 
 const app = express();
 const port = process.env.PORT || 8080;
