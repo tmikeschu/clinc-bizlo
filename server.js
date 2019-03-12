@@ -4,6 +4,7 @@ const R = require("ramda");
 const conversationResolver = require("./lib/finance");
 // const conversationResolver = require("./lib/send_money");
 const sandboxResolver = require("./lib/sandbox");
+const v3Resolver = require("./lib/v3Resolver");
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -35,6 +36,21 @@ app.post("/api/v2/clinc", (req, res) => {
   log("request", req.body);
 
   const resolved = sandboxResolver(req.body);
+
+  if (resolved) {
+    const response = { ...req.body, ...resolved };
+    log("response", response);
+    res.send(JSON.stringify(response));
+  } else {
+    // Clinc ignores any 400-500 responses
+    res.sendStatus(500);
+  }
+});
+
+app.post("/api/v3/clinc", (req, res) => {
+  log("request", req.body);
+
+  const resolved = v3Resolver(req.body);
 
   if (resolved) {
     const response = { ...req.body, ...resolved };
