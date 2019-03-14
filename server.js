@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const R = require("ramda");
 const conversationResolver = require("./lib/finance");
 // const conversationResolver = require("./lib/send_money");
-const sandboxResolver = require("./lib/sandbox");
-const v3Resolver = require("./lib/v3Resolver");
+const v2Resolver = require("./lib/v2");
+const v3Resolver = require("./lib/v3");
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -35,7 +35,7 @@ app.post("/api/v1/clinc", (req, res) => {
 app.post("/api/v2/clinc", (req, res) => {
   log("request", req.body);
 
-  const resolved = sandboxResolver(req.body);
+  const resolved = v2Resolver(req.body);
 
   if (resolved) {
     const response = { ...req.body, ...resolved };
