@@ -4,7 +4,7 @@
   "description": "business logic layer for clinc app",
   "main": "index.js",
   "scripts": {
-    "test": "tape lib/*.test.js",
+    "test": "tape lib/**/*.test.js",
     "start": "node index.js"
   },
   "repository": {
